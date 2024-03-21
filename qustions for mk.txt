@@ -15,4 +15,36 @@
 }
 7 ) sort the array using bitwise opt
 
+#include <stdio.h>
+#define size 100
+int main(int argc, char *argv[]) {
+    int n, revs = 0, rem = 1, sum;
+
+    printf("Enter the number:\n");
+    scanf("%d", &n);
+    while(n !=0){
+    rem = n % 10;
+    revs = revs * 10 + rem;
+    n /= 10;
+}
+    printf("%d", revs);
+    
+    int array[size];
+    int temp = revs;
+    for(int i=0;i<n;i++)
+    {
+        int temp=revs;
+        revs=array[i];
+        array[i]=temp;
+        printf("%d",array[i]);
+    }
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
 
