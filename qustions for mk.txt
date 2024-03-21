@@ -100,6 +100,68 @@ int main()
 
 
 
+#include <stdio.h>
+#include <string.h>
+
+struct college
+{
+    char college_name[100];
+    char student_name[100];
+    int roll_no;
+    int phone_no;
+    char student_address[100];
+};
+
+int main()
+{
+    int n;
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    struct college std[n]; // Declare an array of structures to store multiple student details
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter college name for student %d: ", i + 1);
+        scanf("%s", std[i].college_name); // Input college name directly into college_name member of the structure
+        
+        printf("Enter student name for student %d: ", i + 1);
+        scanf("%s", std[i].student_name); // Input student name
+        
+        printf("Enter roll number for student %d: ", i + 1);
+        scanf("%d", &std[i].roll_no); // Input roll number
+        
+        printf("Enter phone number for student %d: ", i + 1);
+        scanf("%d", &std[i].phone_no); // Input phone number
+        
+        printf("Enter address for student %d: ", i + 1);
+        scanf("%s", std[i].student_address); // Input address
+    }
+
+    // Displaying entered details
+    printf("\nEntered Details:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("Student %d:\n", i + 1);
+        printf("College Name: %s\n", std[i].college_name);
+        printf("Student Name: %s\n", std[i].student_name);
+        printf("Roll Number: %d\n", std[i].roll_no);
+        printf("Phone Number: %d\n", std[i].phone_no);
+        printf("Address: %s\n", std[i].student_address);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 
