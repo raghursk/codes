@@ -38,13 +38,31 @@ int main(int argc, char *argv[]) {
         array[i]=temp;
         printf("%d",array[i]);
     }
-    
-    
-    
-    
-    
-    
-    
     return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+struct school{
+    int roll_no;
+    long pn;
+    char name[100];
+    char school_name[100];
+};
+int main(int argc,char * argv[])
+{
+ struct school std;
+ std.roll_no=1542;
+ std.pn=6364259019;
+ strcpy(std.name="raghavendra");
+ strcpy(std.school_name="adrash vidyalaya rmsa school sedam:\n");
+ 
+ printf("%d\n %ld\n %s\n %s\n",std.roll_no,std.pn,std.name,std.school_name);
+ 
+    
 }
 
