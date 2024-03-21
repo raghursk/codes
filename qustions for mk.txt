@@ -40,12 +40,6 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-
-
-
-
-
-
 #include<stdio.h>
 struct school{
     int roll_no;
@@ -62,7 +56,52 @@ int main(int argc,char * argv[])
  strcpy(std.school_name="adrash vidyalaya rmsa school sedam:\n");
  
  printf("%d\n %ld\n %s\n %s\n",std.roll_no,std.pn,std.name,std.school_name);
- 
+}
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+struct college
+{
+    char college_name[100];
+    char student_name[100];
+    int roll_no;
+    int phone_no;
+    char student_address[100];
+};
+int main()
+{
+    int n;
+    printf("the number of the student Details to Entered"\n);
+    scanf("%d",&n);
+    
+    for(int i=0;i<n;i++)
+    {
+        printf("----------Enter the college_name:------\n");
+        printf("%s",strcpy(std.college_name[i]));
+        
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
