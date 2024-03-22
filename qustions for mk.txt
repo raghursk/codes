@@ -136,7 +136,44 @@ int main()
         
         printf("Enter address for student %d: ", i + 1);
         scanf("%s", std[i].student_address); // Input address
+    }#include <stdio.h>
+
+int main() {
+  int i, j;
+  int row = 2;
+  int col = 2;
+  int array [2] [2] = {{2, 3}, {4, 5}};
+  
+  int array2 [2] [2] ={{6,7}, {8,9}};
+  
+  int array3[2][2] = array[2][2] * array2[2][2];
+  
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array[i][j]);
     }
+    printf("\n");
+  }
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array2[i][j]);
+    }
+    printf("\n");
+  }
+  printf("the multipacation 2 array are :\n");
+  for(i=0;i<2;i++)
+  {
+      for(j=0;j<2;j++)
+      {
+          printf(" %d",array3[i][j]);
+      }
+      printf("\n");
+  }
+  return 0;
+}
+
 
     // Displaying entered details
     printf("\nEntered Details:\n");
@@ -151,7 +188,81 @@ int main()
         printf("\n");
     }
 
-    return 0;
+    return 0;#include <stdio.h>
+
+int main() {
+  int i, j;
+  int row = 2;
+  int col = 2;
+  int array [2] [2] = {{2, 3}, {4, 5}};
+  
+  int array2 [2] [2] ={{6,7}, {8,9}};
+  
+  int array3[2][2] = array[2][2] * array2[2][2];
+  
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array[i][j]);
+    }
+    printf("\n");
+  }
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array2[i][j]);
+    }
+    printf("\n");
+  }
+  printf("the multipacation 2 array are :\n");
+  for(i=0;i<2;i++)
+  {
+      for(j=0;j<2;j++)
+      {
+          printf(" %d",array3[i][j]);
+      }
+      printf("\n");
+  }
+  return 0;
+}
+#include <stdio.h>
+
+int main() {
+  int i, j;
+  int row = 2;
+  int col = 2;
+  int array [2] [2] = {{2, 3}, {4, 5}};
+  
+  int array2 [2] [2] ={{6,7}, {8,9}};
+  
+  int array3[2][2] = array[2][2] * array2[2][2];
+  
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array[i][j]);
+    }
+    printf("\n");
+  }
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array2[i][j]);
+    }
+    printf("\n");
+  }
+  printf("the multipacation 2 array are :\n");
+  for(i=0;i<2;i++)
+  {
+      for(j=0;j<2;j++)
+      {
+          printf(" %d",array3[i][j]);
+      }
+      printf("\n");
+  }
+  return 0;
+}
+
 }
 
 
@@ -173,6 +284,46 @@ int main() {
   return 0;
 }
 
+
+
+--------------------------------------
+#include <stdio.h>
+
+int main() {
+  int i, j;
+  int row = 2;
+  int col = 2;
+  int array [2] [2] = {{2, 3}, {4, 5}};
+  
+  int array2 [2] [2] ={{6,7}, {8,9}};
+  
+  int array3[2][2] = array[2][2] * array2[2][2];
+  
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array[i][j]);
+    }
+    printf("\n");
+  }
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < col; j++)
+    {
+      printf(" %d", array2[i][j]);
+    }
+    printf("\n");
+  }
+  printf("the multipacation 2 array are :\n");
+  for(i=0;i<2;i++)
+  {
+      for(j=0;j<2;j++)
+      {
+          printf(" %d",array3[i][j]);
+      }
+      printf("\n");
+  }
+  return 0;
+}
 
 
 
