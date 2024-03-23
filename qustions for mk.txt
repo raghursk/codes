@@ -326,7 +326,15 @@ int main() {
 }
 
 
-
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter the number:\n");
+    scanf("%d",&num);
+    int result=((num &0x0F)>> 4)| ((num&0x0F)<< 4);
+    printf("%d ",result);
+}
 
 
 
