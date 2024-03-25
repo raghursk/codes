@@ -2550,6 +2550,254 @@ int main() {
 
     return 0;
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//sort the array.................>
+// #include<stdio.h>
+// #include<string.h>
+
+// int main() {
+//     char string[100];
+//     int i, j;
+//     printf("Enter the string:\n");
+//     scanf("%s", string);
+
+//     // Sorting the string in ascending order
+//     int length = strlen(string);
+//     for (i = 0; i < length - 1; i++) {
+//         for (j = i + 1; j < length; j++) {
+//             if (string[i] > string[j]) {
+//                 char temp = string[i];
+//                 string[i] = string[j];
+//                 string[j] = temp;
+//             }
+//         }
+//     }
+//     printf("The sorted string is:\n%s\n", string);
+
+//     return 0;
+// }
+
+
+// // userinput with input 
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char name[25][50], temp[25]; // Declares an array of strings and a temporary string
+//     int n, i, j; // Declare variables for number of strings and iteration
+
+//     printf("\n\nSorts the strings of an array using bubble sort :\n"); // Display information about the task
+//     printf("-----------------------------------------------------\n");
+
+//     printf("Input number of strings: ");
+//     scanf("%d", &n); // Read the number of strings from the user
+
+//     printf("Input string %d :\n", n);
+//     for (i = 0; i <= n; i++) {
+//         fgets(name[i], sizeof(name[i]), stdin); // Read strings from the user
+//     }
+
+//     /* Logic for Bubble Sort */
+//     for (i = 1; i <= n; i++) {
+//         for (j = 0; j <= n - i; j++) {
+//             if (strcmp(name[j], name[j + 1]) > 0) { // Compare adjacent strings
+//                 strcpy(temp, name[j]); // Swap strings using temporary variable
+//                 strcpy(name[j], name[j + 1]);
+//                 strcpy(name[j + 1], temp);
+//             }
+//         }
+//     }
+
+//     printf("The strings appear after sorting:\n"); // Display the sorted strings
+//     for (i = 0; i <= n; i++) {
+//         printf("%s\n", name[i]);
+		
+// 	return 0; // Return 0 to indicate successful execution of the program
+//     }
+// }
+// 13. Write a program in C to extract a substring from a given string.
+
+// Test Data :-----------------------------------------------------
+// Input the string : this is test string
+// Input the position to start extraction :9
+// Input the length of substring :4
+//=================================================================
+// Expected Output :
+// The substring retrieve from the string is : " test "
+===================================================================
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100];
+//     int i;
+//     printf("Enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int srtpos,endpos;
+//     printf("Enter the starting position:\n");
+//     scanf("%d",&srtpos);
+//     printf("Enter the Ending position:\n");
+//     scanf("%d",&endpos);
+//     while(string[i]!='\0')
+//     {
+//         if(string[i]==srtpos && string[i]==endpos)
+//         {
+            
+//         }
+//         i++;
+//     }
+//     printf("The substring is",substring);
+// }
+// anthor logic is =======================================================
+// #include<stdio.h>
+
+// int main() {
+//     int srtpos, length;
+//     char string[100] = "this is test string";
+//     char substring[100];
+//     // Input the starting position and length of substring
+//     printf("Input the position to start extraction: ");
+//     scanf("%d", &srtpos);
+//     printf("Input the length of substring: ");
+//     scanf("%d", &length);
+//     // Extracting the substring
+//     int i, j = 0;
+//     for (i = srtpos - 1; i < srtpos - 1 + length; i++) {
+//         substring[j] = string[i];
+//         j++;
+//     }
+//     substring[j] = '\0'; // Null-terminate the substring
+//     // Print the extracted substring
+//     printf("The substring retrieved from the string is: \"%s\"\n", substring);
+//     return 0;
+-----------------------------------------------------// }
+//in the gave string u need to find substring................>
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char string[100];
+//     char substr[100];
+//     int found = 0;
+
+//     // Input the main string and the substring
+//     printf("Enter the Main String:\n");
+//     scanf(" %[^\n]", string);
+//     printf("Enter the Substring:\n");
+//     scanf(" %[^\n]", substr);
+
+//     int length = strlen(string);
+//     int sublength = strlen(substr);
+
+//     for (int i = 0; i <= length - sublength; i++) {
+//         int j;
+//         for (j = 0; j < sublength; j++) {
+//             if (string[i + j] != substr[j]) {
+//                 break;
+//             }
+//         }
+//         if (j == sublength) { // If the entire substring is matched
+//             found = 1;
+//             printf("Substring found at index %d\n", i);
+//         }
+//     }
+
+//     if (!found) {
+//         printf("Substring not found\n");
+//     }
+//     return 0;
+// }
+// 15. Write a program in C to read a sentence and replace lowercase characters with uppercase and vice versa.
+
+// Test Data :
+// Input the string : This Is A Test String.
+
+// Expected Output :
+
+// The given sentence is   : This Is A Test String.
+// After Case changed the string  is: tHIS iS a tEST sTRING.
+// #include <stdio.h>
+// #include <stdlib.h> // Needed for malloc
+// #include <string.h>
+
+// int main() {
+//     char *string = (char *)malloc(100 * sizeof(char));
+//     char *substring = (char *)malloc(100 * sizeof(char));
+
+//     printf("Enter the main string: ");
+//     scanf("%[^\n]", string); // Read the main string
+//     getchar(); // Consume the newline character left in the buffer
+
+//     printf("Enter the substring: ");
+//     scanf("%[^\n]", substring); // Read the substring
+
+//     int length = strlen(string);
+//     int sublen = strlen(substring);
+//     int found = 0; // Variable to track if substring is found
+
+//     for (int i = 0; i <= length - sublen; i++) {
+//         int j;
+//         for (j = 0; j < sublen; j++) {
+//             if (string[i + j] != substring[j]) {
+//                 break;
+//             }
+//         }
+//         if (j == sublen) { // If the entire substring is matched
+//             found = 1;
+//             printf("The substring found at index: %d\n", i);
+//             break; // Break out of the outer loop once substring is found
+//         }
+//     }
+
+//     if (!found) {
+//         printf("The substring is not found.\n");
+//     }
+
+//     free(string); // Free dynamically allocated memory for string
+//     free(substring); // Free dynamically allocated memory for substring
+
+//     return 0;
+// }
+// gave string to mack uppper case to lowr case in string 
+// #include <stdio.h>
+
+// int main() {
+//     char string[100];
+//     printf("Enter the string:\n");
+//     scanf("%[^\n]", string);
+
+//     for (int i = 0; string[i] != '\0'; i++) {
+//         if (string[i] >= 'A' && string[i] <= 'Z') {
+//             // Convert uppercase letter to lowercase
+//             string[i] = string[i] + 32;
+//         } else if (string[i] >= 'a' && string[i] <= 'z') {
+//             // Convert lowercase letter to uppercase
+//             string[i] = string[i] - 32;
+//         }
+//     }
+//     printf("The converted string is: %s\n", string);
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
