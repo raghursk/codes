@@ -2520,6 +2520,36 @@ int main() {
     return 0;
 }
 
+--------------------------------------------------------------------------[
+#include<stdio.h>
+
+int main() {
+    char string[100];
+    int count[256] = {0};
+    printf("Enter the string:\n");
+    scanf("%s", string);
+
+    // Count occurrences of each character in the string
+    int i = 0;
+    while (string[i] != '\0') {
+        count[string[i]]++;
+        i++;
+    }
+
+    int hig = 0;
+    char max_char;
+    for (i = 0; i < 256; i++) {
+        if (count[i] > hig) {
+            hig = count[i];
+            max_char = i;
+        }
+    }
+
+    printf("Character with highest frequency: '%c'\n", max_char);
+    printf("Frequency: %d\n", hig);
+
+    return 0;
+}
 
 
 
