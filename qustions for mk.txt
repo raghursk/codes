@@ -2778,7 +2778,43 @@ int main() {
 //     printf("The converted string is: %s\n", string);
 //     return 0;
 // }
-
+------------------------------------------------------------------------------------------------------------------------
+//  16. Write a program in C to find the number of times a given word 'the' appears in the given string.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i,j;
+    int found=0;
+    char string[100];
+    printf("enter th string:\n");
+    scanf("%[^\n]",string);
+    char substring[100]="the";
+    int length=strlen(substring);
+    int sublength=strlen(substring);
+    for(i=0;i<length-sublength;i++)
+    {
+        for(j=0;j<sublength;j++)
+        {
+            if(string[i+j]!=substring[j])
+            {
+                break;
+            }
+        }
+    }
+    if(j==sublength)
+    {
+        found;
+        printf("The string found at the index %d:",i);
+        printf("the substring is %s",substring);
+    }
+    if(!found)
+    {
+        printf("the string is NOT found:\n");
+    }
+}
+    
+ 
 
 
 
