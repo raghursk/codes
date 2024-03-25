@@ -2485,6 +2485,40 @@ int main()
     printf("the char %c in vowels are %d :",item,count);
     printf("the char %c in vowels are %d :",item,count);
     
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    char string[100];
+    int count = 0;
+    char item;
+    int vowels_count = 0;
+    int consonants_count = 0;
+
+    printf("Enter the string:\n");
+    scanf("%s", string);
+    printf("Enter the character:\n");
+    scanf(" %c", &item);
+
+    for (i = 0; string[i] != '\0'; i++) {
+        char ch = string[i];
+
+        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || 
+                ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                vowels_count++;
+            } else {
+                consonants_count++;
+            }
+        }
+    }
+
+    printf("The character '%c' appears %d times in vowels.\n", item, vowels_count);
+    printf("The character '%c' appears %d times in consonants.\n", item, consonants_count);
+
+    return 0;
+}
 
 
 
