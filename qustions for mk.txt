@@ -200,7 +200,240 @@ int main() {
   }
   for (i = 0; i < row; i++) {
     for (j = 0; j < col; j++)
-    {
+    {// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       printf(" %d", array2[i][j]);
     }
     printf("\n");
@@ -210,7 +443,473 @@ int main() {
   {
       for(j=0;j<2;j++)
       {
-          printf(" %d",array3[i][j]);
+          printf(" %d",// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+array3[i][j]);
       }
       printf("\n");
   }
@@ -234,7 +933,240 @@ int main() {
     {
       printf(" %d", array[i][j]);
     }
-    printf("\n");
+    printf("\n");// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
   for (i = 0; i < row; i++) {
     for (j = 0; j < col; j++)
@@ -252,7 +1184,240 @@ int main() {
       }
       printf("\n");
   }
-  return 0;
+  return 0;// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 }
@@ -262,7 +1427,240 @@ int main() {
 
 int main() {
   int i, j;
-  int row = 2;
+  int row = 2;// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   int col = 2;
   int array[row][col] = {{2, 3}, {4, 5}};
 
@@ -283,7 +1681,240 @@ int main() {
 
 int main() {
   int i, j;
-  int row = 2;
+  int row = 2;// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   int col = 2;
   int array [2] [2] = {{2, 3}, {4, 5}};
   
@@ -348,9 +1979,467 @@ int main()
          count++;   
         }
     }
-    printf("the item is repeted is:=%d",count);
+    printf("the item // 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+is repeted is:=%d",count);
 }
 }
+
+
+
+
+
+
+
+// 1. Write a program in C to input a string and print it.
+// #include<stdio.h>
+// int main()
+// {
+//     char string[100]="HAPPY HOLI NYU\n";
+//     //input the string ...
+//     printf("%s",string);
+//   char string2[100];
+//   printf("Enter the string:\n");
+//   scanf("%s",string);
+// }
+// 2. Write a program in C to find the length of a string without using library functions.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int length=0;
+//     char string[100]="Nayana kolli";
+//     for(;string[length]!='\0';length++)
+//     {
+//       if(string[length]==' ')
+//       {
+//           printf("%d",length);
+//       }
+//     }
+// }
+// int main()
+// {
+//     char string[100];
+//     int count = 0;
+//     int i;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the entire line until newline
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] != ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     printf("The number of characters in the string (excluding spaces): %d\n", count);
+
+//     return 0;
+// }
+//3. Write a program in C to separate individual characters from a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int sprt=0;
+//     char string[100]=" ";
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     while(string[sprt]!='\0')
+//     {
+//         printf(" %c",string[l]);
+//         sprt++;
+//     }
+// }
+//4. Write a program in C to print individual characters of a string in reverse order
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     printf("enter the string:\n");
+//     scanf("%[^\n]",string);
+//     int length=strlen(string);
+//     for(int i=0,j=length-i-1;i<j;i++,j--)
+//     {
+//        if(string[i]==' '||string[i]=="\n")
+//        {
+//         int temp=string[i];
+//         string[i]=string[j];
+//         string[j]=temp;
+//       }
+//    }
+//     printf("%s",string);
+// }
+//5. Write a program in C to count the total number of words in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     char item;
+//     int count;
+//     printf("Enter the String:\n");
+//     scanf("%[^\n]",string);
+//     printf("enter the charchteris:\n");
+//     scanf(" %c",&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("the number of charters are repted the gaven  string is: %d",count);
+// }
+//  6. Write a program in C to compare two strings without using string library functions.
+// C program to compare the two strings without using strcmp() function
+// #include <stdio.h>
+// #define str_size 100 // Declare the maximum size of the string
+
+// // Function to compare two strings
+// int test(char* s1, char* s2) {
+//     int flag = 0; // Initialize a flag variable to indicate string equality or inequality
+
+//     // Loop to compare characters in the strings until null terminator '\0' is found in both strings
+//     while (*s1 != '\0' || *s2 != '\0') {
+//         if (*s1 == *s2) { // Check if the characters in both strings are equal
+//             s1++; // Move to the next character in the first string
+//             s2++; // Move to the next character in the second string
+//         } else if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0') || *s1 != *s2) {
+//             // Check for cases where one string ends before the other or characters at the same index are not equal
+//             flag = 1; // Set the flag to indicate inequality
+//             break; // Exit the loop as inequality is found
+//         }
+//     }
+//     return flag; // Return the flag indicating string equality (0) or inequality (1)
+// }
+
+// // Main function
+// int main(void) {
+//     char str1[str_size], str2[str_size]; // Declare character arrays for the two strings
+//     int flg = 0; // Initialize a flag variable
+
+//     printf("\nInput the 1st string : ");
+//     fgets(str1, sizeof str1, stdin); // Read the first string from the standard input (keyboard)
+//     printf("Input the 2nd string : ");
+//     fgets(str2, sizeof str2, stdin); // Read the second string from the standard input (keyboard)
+
+//     printf("\nString1: %s", str1); // Display the first string
+//     printf("String2: %s", str2); // Display the second string
+
+//     flg = test(str1, str2); // Call the function to compare the strings
+
+//     // Display the comparison result based on the flag value
+//     if (flg == 0) {
+//         printf("\nStrings are equal.\n");
+//     } else if (flg == 1) {
+//         printf("\nStrings are not equal.");
+//     }
+
+//     return 0; // Return 0 to indicate successful program execution
+// } 
+//7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char string[100];
+//     int count;b
+//     char item;
+//     printf("enter the string:\n");
+//     scanf("%s",string);
+//     printf("enter the item:\n");
+//     scanf('%c',&item);
+//     for(int i=0;string[i]!='\0';i++)
+//     {
+//         if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+//         {
+//          count++;   
+//         }
+//     }
+//     printf("the item is repeted is:=%d",count);
+// }
+// }
+// anthor logic code =====================
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// #include <stdio.h>
+
+// int main()
+// {
+//     char string[100];
+//     int count[256] = {0}; // Initialize all counts to 0
+//     int i, item;
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", string); // Read the string until newline
+
+//     printf("Enter the character to count: ");
+//     scanf(" %c", &item); // Read the character to count
+
+//     for (i = 0; string[i] != '\0'; i++)
+//     {
+//         if (string[i] == item)
+//         {
+//             count[item]++; // Increment the count for the specified character
+//         }
+//     }
+//     printf("The character '%c' appears %d times in the string.\n", item, count[item]);
+//     return 0;
+// }
+// 8. Write a program in C to copy one string to another string.
+// #include<stdio.h>
+// int main()
+// {
+//     int i;int j;
+//     char string[100];
+//     char string2[00];
+//     printf("Enter the string:\n");
+//     scanf("%s",string);
+//     while(string[i]!='\0')
+//     {
+//         i++;
+//     }
+//     while(string[j]!='\0')
+//     {
+//         string[i]=string2[j];
+//         i++;
+//         j++;
+//     }
+//     string[i]!='\0';
+//     printf("The copyed string is:%s",string);
+// }
+
+
+
+
+
+
+
+
+
+
 
 
 
