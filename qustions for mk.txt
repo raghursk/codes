@@ -1,4 +1,5 @@
- 1 ) In array of integers as input from the user and finds the second smallest index of an element in the array. However, your program should have a time complexity of O(n), where n is the size of the array, and it should not use any sorting algorithms.
+#################################--------------------------------------------------------- ERROR CODE --------------------#################################################################################
+1 ) In array of integers as input from the user and finds the second smallest index of an element in the array. However, your program should have a time complexity of O(n), where n is the size of the array, and it should not use any sorting algorithms.
 2 ) Is it possible to change the size of an array once it's declared ?
 3 ) In string  input is abcd :-- output wellbe bcda--cdab-dabc using 
 4 ) what happens if you attempt to perfroms artimatic opt on null opinter ?
@@ -14,7 +15,7 @@
     return 0;
 }
 7 ) sort the array using bitwise opt
-
+====================================================================================
 #include <stdio.h>
 #define size 100
 int main(int argc, char *argv[]) {
@@ -40,6 +41,7 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
+=================================================================================
 #include<stdio.h>
 struct school{
     int roll_no;
@@ -58,12 +60,7 @@ int main(int argc,char * argv[])
  printf("%d\n %ld\n %s\n %s\n",std.roll_no,std.pn,std.name,std.school_name);
 }
 
-
-
-
-
-
-
+===========================================================================================================
 
 
 #include<stdio.h>
@@ -87,19 +84,9 @@ int main()
         printf("%s",strcpy(std.college_name[i]));
         
     }
-    
-}
+    }
 
-
-
-
-
-
-
-
-
-
-
+====================================================================
 #include <stdio.h>
 #include <string.h>
 
@@ -136,7 +123,9 @@ int main()
         
         printf("Enter address for student %d: ", i + 1);
         scanf("%s", std[i].student_address); // Input address
-    }#include <stdio.h>
+    }
+===============================================================================
+#include <stdio.h>
 
 int main() {
   int i, j;
@@ -173,7 +162,7 @@ int main() {
   }
   return 0;
 }
-
+===================================================
 
     // Displaying entered details
     printf("\nEntered Details:\n");
@@ -188,7 +177,9 @@ int main() {
         printf("\n");
     }
 
-    return 0;#include <stdio.h>
+    return 0;
+================================================
+#include <stdio.h>
 
 int main() {
   int i, j;
@@ -225,6 +216,7 @@ int main() {
   }
   return 0;
 }
+==================================================
 #include <stdio.h>
 
 int main() {
@@ -264,7 +256,7 @@ int main() {
 }
 
 }
-
+--------------------------------
 
 #include <stdio.h>
 
@@ -325,7 +317,7 @@ int main() {
   return 0;
 }
 
-
+------------------------------------------------------------------------------------------------
 #include<stdio.h>
 int main()
 {
@@ -335,6 +327,32 @@ int main()
     int result=((num &0x0F)>> 4)| ((num&0x0F)<< 4);
     printf("%d ",result);
 }
+
+------------------------------------------------------
+// 7. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char string[100];
+    int count;b
+    char item;
+    printf("enter the string:\n");
+    scanf("%s",string);
+    printf("enter the item:\n");
+    scanf('%c',&item);
+    for(int i=0;string[i]!='\0';i++)
+    {
+        if(string[i]==item ||string[i]=='0' && string[i]==9 || string[i]=='A' && string[i]=='Z'|| string[i]=='!','@','$','%','^','&','*','(',')' || string[i]=='a' && string[i]=='z')
+        {
+         count++;   
+        }
+    }
+    printf("the item is repeted is:=%d",count);
+}
+}
+
+
 
 
 
