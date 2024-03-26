@@ -2844,6 +2844,59 @@ int main() {
     return 0; // Added return statement
 }
 
+
+============================================
+
+#include<stdio.h>
+#include<string.h>
+struct college
+{
+    char college_name[100];
+    char Student_name[100];
+    int Student_rollno;
+    int phone_number;
+};
+struct Time
+{
+    int sec;
+    int min;
+    int hrs;
+};
+int main()
+{
+    int i,n;
+    struct college std;
+    struct Time time1,time2,result;
+    printf("Enter the number of Student Detailsr:\n");
+    scanf("%d",n);
+    for(i=0;i<n;i++)
+    {
+    printf("Student Details NO =:\n",i+1);
+    printf("Enter the college_name:\n");
+    scanf("%99[^\n]",std[i].college_name);
+    printf("Enter the college_name:\n");
+    scanf("%99[^\n]",std[i].Student_name);
+    printf("Enter the college_name:\n");
+    scanf("%d",std[i].Student_rollno);
+    printf("Enter the college_name:\n");
+    scanf("%d",std[i].phone_number);
+    
+    printf("The Details are  is this \n college_name=%s\n Student_name = %s\n Student_rollno = %d\n phone_number =%d\n",i+1.std[i].college_name,std[i].Student_name,std[i].phone_number);
+    }
+    printf("In college have 2 timeing  :\n");
+    printf("enter the time1 Details:00;00;00\n");
+    scanf("%d %d %d",&time1.sec,&time1.min,&time1.hrs);
+    printf("enter the time2 Details:00;00;00\n");
+    scanf("%d %d %d",&time2.sec,&time2.min,&time2.hrs);
+    result.sec=time1.sec+time2.sec;
+    result.min = time1.min + time2.min+ result.sec / 60;
+    result.hrs = time1.hrs + time2.hrs + result.min / 60;
+    result.min %= 60;
+    result.sec %= 60;
+    printf("\nResultant Time: %02d:%02d:%02d\n", result.hrs, result.min, result.sec);
+    return 0;
+}
+
  
 
 
